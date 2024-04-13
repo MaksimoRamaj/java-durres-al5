@@ -22,10 +22,9 @@ public class BankAccount {
         System.out.println("Gjendja aktuale: " + checkBalance());
     }
 
-    public double withdawMoney(double toWithdraw){
+    public double withdawMoney(double toWithdraw)throws WithdrawException{
         if (toWithdraw > balance || toWithdraw < 0){
-            System.out.println("Nuk mund te terheqesh kete shume!");
-            return 0;
+            throw new WithdrawException("Nuk mund te terheqesh kete shume!");
         }
         balance = balance - toWithdraw;
         System.out.println("Gjendja aktuale: " + checkBalance());
