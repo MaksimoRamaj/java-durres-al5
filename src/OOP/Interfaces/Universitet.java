@@ -4,4 +4,6 @@ public class Universitet {
     void receivePayments(Payments p){
         p.makePayment();
     }
+
+
 }
